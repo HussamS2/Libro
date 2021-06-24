@@ -96,11 +96,12 @@ class Architecture extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                 child: Container(
                                   width: 80,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       TextButton(
                                         child: Text("Download"),

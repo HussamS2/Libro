@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "514691126374",
+    "project_id": "libro-8627a",
+    "storage_bucket": "libro-8627a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514691126374:android:82c6b952f79303505bc9a7",
+        "android_client_info": {
+          "package_name": "com.Libro.Library_App"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514691126374-34tf77plpshlruvbcpetgq8pda766o3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ77O7AB9-VcXRVYmcp-Nocat5doQr92s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514691126374-34tf77plpshlruvbcpetgq8pda766o3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
