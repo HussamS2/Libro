@@ -82,28 +82,14 @@ class Architecture extends StatelessWidget {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "Avalon Publishing, 2007",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
                                 padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                 child: Container(
-                                  width: 80,
+                                  width: 100,
                                   child: Column(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                      TextButton(
+                                      new ElevatedButton(
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
