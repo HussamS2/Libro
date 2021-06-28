@@ -97,14 +97,14 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 100),
+        preferredSize: Size(double.infinity, 70),
         child: AppBar(
           title: Text(
             "Libro",
             style: TextStyle(
               fontFamily: 'DMSans',
               fontWeight: FontWeight.w700,
-              fontSize: 50,
+              fontSize: 45,
               color: Colors.grey[800],
             ),
           ),

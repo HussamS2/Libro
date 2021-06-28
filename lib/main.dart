@@ -6,7 +6,13 @@ import 'package:flutter_downloader/flutter_downloader.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await FlutterDownloader.initialize(debug: true);
+  FlutterDownloader.registerCallback(TestClass.callback);
+
   runApp(MyAppLibro());
+}
+
+class TestClass {
+  static void callback(String id, DownloadTaskStatus status, int progress) {}
 }
 
 class MyAppLibro extends StatelessWidget {

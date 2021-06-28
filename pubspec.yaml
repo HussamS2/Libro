@@ -75,6 +75,7 @@ flutter:
     - Assets/arch3.png
     - Assets/arch4.png
     - Assets/arch5.png
+    - Assets/A1.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
