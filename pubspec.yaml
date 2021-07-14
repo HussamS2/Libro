@@ -27,7 +27,8 @@ dependencies:
   page_transition: "^1.1.7+2"
   flutter_downloader: ^1.6.1
   path_provider: ^2.0.2
-  permission_handler: ^8.1.1
+  permission_handler: ^8.1.2
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -75,7 +76,12 @@ flutter:
     - Assets/arch3.png
     - Assets/arch4.png
     - Assets/arch5.png
-    - Assets/A1.jpeg
+    - Assets/eng.png
+    - Assets/gg.png
+    - Assets/s.png
+    - Assets/h.png
+    - Assets/m.png
+    - Assets/b.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

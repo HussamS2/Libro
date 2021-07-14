@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class Biology extends StatelessWidget {
   @override
@@ -8,7 +11,7 @@ class Biology extends StatelessWidget {
           preferredSize: Size(double.infinity, 100),
           child: AppBar(
             title: Text(
-              'Architecture',
+              'Biology',
               style: TextStyle(
                 fontFamily: 'DMSans',
                 fontWeight: FontWeight.w700,
@@ -20,7 +23,7 @@ class Biology extends StatelessWidget {
             flexibleSpace: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('Assets/arch.png'),
+                        image: AssetImage('Assets/eng.png'),
                         fit: BoxFit.cover))),
           ),
         ),
@@ -35,12 +38,12 @@ class Biology extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -50,7 +53,7 @@ class Biology extends StatelessWidget {
                                 image: AssetImage('Assets/arch4.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -59,7 +62,7 @@ class Biology extends StatelessWidget {
                               Text(
                                 "Understanding Architecture",
                                 style: TextStyle(
-                                    fontSize: 19,
+                                    fontSize: 18,
                                     color: Color.fromARGB(255, 48, 48, 54),
                                     fontFamily: 'DMSans',
                                     fontWeight: FontWeight.w700),
@@ -97,12 +100,48 @@ class Biology extends StatelessWidget {
                                 child: Container(
                                   width: 200,
                                   child: Text(
-                                    "696 Pages",
+                                    "696 pages",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: Color.fromARGB(255, 48, 48, 54),
                                         fontFamily: 'DMSans',
                                         fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
                                   ),
                                 ),
                               )
@@ -123,12 +162,12 @@ class Biology extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -138,7 +177,7 @@ class Biology extends StatelessWidget {
                                 image: AssetImage('Assets/arch3.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -193,6 +232,42 @@ class Biology extends StatelessWidget {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               )
                             ],
                           ),
@@ -211,12 +286,12 @@ class Biology extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -226,7 +301,7 @@ class Biology extends StatelessWidget {
                                 image: AssetImage('Assets/arch5.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -281,6 +356,42 @@ class Biology extends StatelessWidget {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               )
                             ],
                           ),
@@ -299,12 +410,12 @@ class Biology extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -314,7 +425,7 @@ class Biology extends StatelessWidget {
                                 image: AssetImage('Assets/arch2.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -369,6 +480,42 @@ class Biology extends StatelessWidget {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               )
                             ],
                           ),
@@ -387,12 +534,12 @@ class Biology extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -402,7 +549,7 @@ class Biology extends StatelessWidget {
                                 image: AssetImage('Assets/1st.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -455,6 +602,42 @@ class Biology extends StatelessWidget {
                                         color: Color.fromARGB(255, 48, 48, 54),
                                         fontFamily: 'DMSans',
                                         fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
                                   ),
                                 ),
                               )

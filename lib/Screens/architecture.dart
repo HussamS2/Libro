@@ -38,12 +38,12 @@ class Architecture extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -53,7 +53,7 @@ class Architecture extends StatelessWidget {
                                 image: AssetImage('Assets/arch4.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -61,6 +61,130 @@ class Architecture extends StatelessWidget {
                             children: <Widget>[
                               Text(
                                 "Understanding Architecture",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Color.fromARGB(255, 48, 48, 54),
+                                    fontFamily: 'DMSans',
+                                    fontWeight: FontWeight.w700),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                child: Container(
+                                  width: 200,
+                                  child: Text(
+                                    "Leland M. Roth",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromARGB(255, 48, 48, 54),
+                                        fontFamily: 'DMSans',
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                child: Container(
+                                  width: 200,
+                                  child: Text(
+                                    "Avalon Publishing, 2007",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromARGB(255, 48, 48, 54),
+                                        fontFamily: 'DMSans',
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                child: Container(
+                                  width: 200,
+                                  child: Text(
+                                    "696 pages",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromARGB(255, 48, 48, 54),
+                                        fontFamily: 'DMSans',
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://www.hindawi.org/books/75181646.pdf",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(5.0),
+              child: Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                elevation: 14,
+                shadowColor: Colors.grey,
+                child: Container(
+                  height: 170.0,
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        height: 170.0,
+                        width: 110.0,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(20),
+                                topLeft: Radius.circular(20)),
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage('Assets/arch3.png'))),
+                      ),
+                      Container(
+                        height: 170,
+                        child: Padding(
+                          padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                "World Architecture",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -72,7 +196,35 @@ class Architecture extends StatelessWidget {
                                 child: Container(
                                   width: 200,
                                   child: Text(
-                                    "Leland M. Roth",
+                                    "Will Pryce",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromARGB(255, 48, 48, 54),
+                                        fontFamily: 'DMSans',
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                child: Container(
+                                  width: 200,
+                                  child: Text(
+                                    "Thames & Hudson, 2008",
+                                    style: TextStyle(
+                                        fontSize: 15,
+                                        color: Color.fromARGB(255, 48, 48, 54),
+                                        fontFamily: 'DMSans',
+                                        fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
+                                child: Container(
+                                  width: 200,
+                                  child: Text(
+                                    "313 Pages",
                                     style: TextStyle(
                                         fontSize: 15,
                                         color: Color.fromARGB(255, 48, 48, 54),
@@ -134,100 +286,12 @@ class Architecture extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20),
-                                topLeft: Radius.circular(20)),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('Assets/arch3.png'))),
-                      ),
-                      Container(
-                        height: 150,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                "World Architecture",
-                                style: TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 48, 48, 54),
-                                    fontFamily: 'DMSans',
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "Will Pryce",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "Thames & Hudson, 2008",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "313 Pages",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 14,
-                shadowColor: Colors.grey,
-                child: Container(
-                  height: 130.0,
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -237,7 +301,7 @@ class Architecture extends StatelessWidget {
                                 image: AssetImage('Assets/arch5.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -292,6 +356,42 @@ class Architecture extends StatelessWidget {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               )
                             ],
                           ),
@@ -310,12 +410,12 @@ class Architecture extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -325,7 +425,7 @@ class Architecture extends StatelessWidget {
                                 image: AssetImage('Assets/arch2.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -380,6 +480,42 @@ class Architecture extends StatelessWidget {
                                         fontWeight: FontWeight.w700),
                                   ),
                                 ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
                               )
                             ],
                           ),
@@ -398,12 +534,12 @@ class Architecture extends StatelessWidget {
                 elevation: 14,
                 shadowColor: Colors.grey,
                 child: Container(
-                  height: 130.0,
+                  height: 170.0,
                   child: Row(
                     children: <Widget>[
                       Container(
-                        height: 130.0,
-                        width: 90.0,
+                        height: 170.0,
+                        width: 110.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
@@ -413,7 +549,7 @@ class Architecture extends StatelessWidget {
                                 image: AssetImage('Assets/1st.png'))),
                       ),
                       Container(
-                        height: 150,
+                        height: 170,
                         child: Padding(
                           padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
                           child: Column(
@@ -466,6 +602,42 @@ class Architecture extends StatelessWidget {
                                         color: Color.fromARGB(255, 48, 48, 54),
                                         fontFamily: 'DMSans',
                                         fontWeight: FontWeight.w700),
+                                  ),
+                                ),
+                              ),
+                              Padding(
+                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+                                child: Container(
+                                  width: 100,
+                                  child: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      new ElevatedButton(
+                                        child: Text("Download"),
+                                        onPressed: () async {
+                                          final status = await Permission
+                                              .storage
+                                              .request();
+                                          if (status.isGranted) {
+                                            final externalDir =
+                                                await getExternalStorageDirectory();
+
+                                            final id =
+                                                await FlutterDownloader.enqueue(
+                                              url:
+                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                              savedDir: externalDir.path,
+                                              fileName: "Download",
+                                              showNotification: true,
+                                              openFileFromNotification: true,
+                                            );
+                                          } else {
+                                            print("Permission denied");
+                                          }
+                                        },
+                                      ),
+                                    ],
                                   ),
                                 ),
                               )
