@@ -82,6 +82,14 @@ flutter:
     - Assets/h.png
     - Assets/m.png
     - Assets/b.png
+    - Assets/animal_s.png
+    - Assets/freakonomics.png
+    - Assets/materials_s.png
+    - Assets/the_design.png
+    - Assets/the_great_b.png
+    - Assets/the_undercover.png
+    - Assets/thinking_f.png
+    - Assets/why_b.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

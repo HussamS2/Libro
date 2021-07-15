@@ -43,14 +43,14 @@ class Engineering extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 170.0,
-                        width: 110.0,
+                        width: 125.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
                                 topLeft: Radius.circular(20)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('Assets/arch4.png'))),
+                                image: AssetImage('Assets/material_s.png'))),
                       ),
                       Container(
                         height: 170,
@@ -60,7 +60,7 @@ class Engineering extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "Understanding Architecture",
+                                "Material Science",
                                 style: TextStyle(
                                     fontSize: 18,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -130,7 +130,7 @@ class Engineering extends StatelessWidget {
                                             final id =
                                                 await FlutterDownloader.enqueue(
                                               url:
-                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                                  "http://kaizenha.com/wp-content/uploads/2016/04/Materials-Textbook-8th-Edition.pdf",
                                               savedDir: externalDir.path,
                                               fileName: "Download",
                                               showNotification: true,
@@ -167,14 +167,14 @@ class Engineering extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 170.0,
-                        width: 110.0,
+                        width: 125.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
                                 topLeft: Radius.circular(20)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('Assets/arch3.png'))),
+                                image: AssetImage('Assets/the_great_b.png'))),
                       ),
                       Container(
                         height: 170,
@@ -184,7 +184,7 @@ class Engineering extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "World Architecture",
+                                "The Great Bridge",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -254,7 +254,7 @@ class Engineering extends StatelessWidget {
                                             final id =
                                                 await FlutterDownloader.enqueue(
                                               url:
-                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                                  "https://doc-04-9k-docs.googleusercontent.com/docs/securesc/hivqupevjqpb90ng9oc5km6936t64pk9/447ugn1h97g1k5vdp9vdhan96are7ig8/1626338175000/03862603172112226995/08654462311410185864Z/1BZgUEZamBjgUzp-Y6xJbqu8KVxDvWJ_u?e=download&nonce=lsgh0ncg77pj2&user=08654462311410185864Z&hash=ja7h09tr4kl3qvr7jamp87pnarf9v6lr",
                                               savedDir: externalDir.path,
                                               fileName: "Download",
                                               showNotification: true,
@@ -291,14 +291,14 @@ class Engineering extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 170.0,
-                        width: 110.0,
+                        width: 125.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
                                 topLeft: Radius.circular(20)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('Assets/arch5.png'))),
+                                image: AssetImage('Assets/why_b.png'))),
                       ),
                       Container(
                         height: 170,
@@ -308,7 +308,7 @@ class Engineering extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "The 99% Invisible City",
+                                "Why Buildings Fall Down",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -378,7 +378,7 @@ class Engineering extends StatelessWidget {
                                             final id =
                                                 await FlutterDownloader.enqueue(
                                               url:
-                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                                  "https://civiltechnocrats.files.wordpress.com/2013/11/82003327-why-buildings-fall-down-how-structures-fail.pdf",
                                               savedDir: externalDir.path,
                                               fileName: "Download",
                                               showNotification: true,
@@ -415,14 +415,14 @@ class Engineering extends StatelessWidget {
                     children: <Widget>[
                       Container(
                         height: 170.0,
-                        width: 110.0,
+                        width: 125.0,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
                                 bottomLeft: Radius.circular(20),
                                 topLeft: Radius.circular(20)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('Assets/arch2.png'))),
+                                image: AssetImage('Assets/the_design.png'))),
                       ),
                       Container(
                         height: 170,
@@ -432,7 +432,7 @@ class Engineering extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "The poetics of space",
+                                "The Design of Everyday",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -502,131 +502,7 @@ class Engineering extends StatelessWidget {
                                             final id =
                                                 await FlutterDownloader.enqueue(
                                               url:
-                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
-                                              savedDir: externalDir.path,
-                                              fileName: "Download",
-                                              showNotification: true,
-                                              openFileFromNotification: true,
-                                            );
-                                          } else {
-                                            print("Permission denied");
-                                          }
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(5.0),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-                elevation: 14,
-                shadowColor: Colors.grey,
-                child: Container(
-                  height: 170.0,
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                        height: 170.0,
-                        width: 110.0,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(20),
-                                topLeft: Radius.circular(20)),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage('Assets/1st.png'))),
-                      ),
-                      Container(
-                        height: 170,
-                        child: Padding(
-                          padding: EdgeInsets.fromLTRB(10, 10, 0, 0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                "Backstage Architecture",
-                                style: TextStyle(
-                                    fontSize: 19,
-                                    color: Color.fromARGB(255, 48, 48, 54),
-                                    fontFamily: 'DMSans',
-                                    fontWeight: FontWeight.w700),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "Federica Russo",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "Publisher",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 5, 0, 2),
-                                child: Container(
-                                  width: 200,
-                                  child: Text(
-                                    "293 Pages",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Color.fromARGB(255, 48, 48, 54),
-                                        fontFamily: 'DMSans',
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
-                                child: Container(
-                                  width: 100,
-                                  child: Column(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: <Widget>[
-                                      new ElevatedButton(
-                                        child: Text("Download"),
-                                        onPressed: () async {
-                                          final status = await Permission
-                                              .storage
-                                              .request();
-                                          if (status.isGranted) {
-                                            final externalDir =
-                                                await getExternalStorageDirectory();
-
-                                            final id =
-                                                await FlutterDownloader.enqueue(
-                                              url:
-                                                  "https://firebasestorage.googleapis.com/v0/b/storage-3cff8.appspot.com/o/2020-05-29%2007-18-34.mp4?alt=media&token=841fffde-2b83-430c-87c3-2d2fd658fd41",
+                                                  "https://www.sunyoungkim.org/class/old/hci_f18/pdf/The-Design-of-Everyday-Things-Revised-and-Expanded-Edition.pdf",
                                               savedDir: externalDir.path,
                                               fileName: "Download",
                                               showNotification: true,
