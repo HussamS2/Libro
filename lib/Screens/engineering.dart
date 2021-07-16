@@ -50,7 +50,7 @@ class Engineering extends StatelessWidget {
                                 topLeft: Radius.circular(20)),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('Assets/material_s.png'))),
+                                image: AssetImage('Assets/materials_s.png'))),
                       ),
                       Container(
                         height: 170,
@@ -118,6 +118,8 @@ class Engineering extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.amberAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -242,6 +244,8 @@ class Engineering extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.amberAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -366,6 +370,8 @@ class Engineering extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.amberAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -490,6 +496,8 @@ class Engineering extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.amberAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission

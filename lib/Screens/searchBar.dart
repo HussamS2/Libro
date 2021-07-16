@@ -8,10 +8,26 @@ class DataSearch extends SearchDelegate<String> {
     "The Future of Architecture in a 100 Buildings",
     "The origin of Species",
     "The Design of Everyday Things",
+    "Material Science",
+    "Thinking Fast & Slow",
+    "Understanding Architecture",
+    "World Architecture",
+    "The Poetics Of Space",
+    "The Great Bridge",
+    "Why Buildings Fall Down",
+    "The Design Of Everything",
+    "Animal Spirits",
+    "Undercover Economist",
+    "Freakonomics",
+    "Guyton's Physiology",
+    "Harrison's Principles",
+    "Macloed's Examination"
   ];
   final recentBooks = [
     "Gray's Anatomy",
     "The Future of Architecture in a 100 Buildings",
+    "Material Science",
+    "Thinking Fast & Slow",
     "The origin of Species",
   ];
 
@@ -49,6 +65,9 @@ class DataSearch extends SearchDelegate<String> {
 
     return ListView.builder(
       itemBuilder: (context, index) => ListTile(
+        onTap: () {
+          showResults(context);
+        },
         leading: Icon(FontAwesomeIcons.bookOpen),
         title: Text(suggestionList[index]),
       ),

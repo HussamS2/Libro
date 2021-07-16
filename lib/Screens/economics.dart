@@ -23,8 +23,7 @@ class Economics extends StatelessWidget {
             flexibleSpace: Container(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage('Assets/eng.png'),
-                        fit: BoxFit.cover))),
+                        image: AssetImage('Assets/p.png'), fit: BoxFit.cover))),
           ),
         ),
         body: ListView(
@@ -118,6 +117,9 @@ class Economics extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary:
+                                                Colors.lightGreenAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -243,6 +245,9 @@ class Economics extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary:
+                                                Colors.lightGreenAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -310,7 +315,7 @@ class Economics extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text(
-                                "The Undercover Economist",
+                                "Undercover Economist",
                                 style: TextStyle(
                                     fontSize: 19,
                                     color: Color.fromARGB(255, 48, 48, 54),
@@ -368,6 +373,9 @@ class Economics extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary:
+                                                Colors.lightGreenAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -492,6 +500,9 @@ class Economics extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary:
+                                                Colors.lightGreenAccent[700]),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission

@@ -117,6 +117,8 @@ class Medicine extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.lightGreen),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -241,6 +243,8 @@ class Medicine extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.lightGreen),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -365,6 +369,8 @@ class Medicine extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.lightGreen),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission
@@ -489,6 +495,8 @@ class Medicine extends StatelessWidget {
                                         MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
                                       new ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            primary: Colors.lightGreen),
                                         child: Text("Download"),
                                         onPressed: () async {
                                           final status = await Permission

@@ -90,6 +90,8 @@ flutter:
     - Assets/the_undercover.png
     - Assets/thinking_f.png
     - Assets/why_b.png
+    - Assets/p.png
+    - Assets/f.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

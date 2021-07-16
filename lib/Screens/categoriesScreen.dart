@@ -10,6 +10,7 @@ import 'package:Library_App/Screens/medicine.dart';
 import 'package:Library_App/Screens/physics.dart';
 import 'package:Library_App/Screens/searchBar.dart';
 import 'package:flutter/material.dart';
+import 'package:Library_App/popup.dart';
 
 class CategoriesScreen extends StatelessWidget {
   void selectCategory(BuildContext context) {
@@ -122,11 +123,21 @@ class CategoriesScreen extends StatelessWidget {
                 },
                 color: Colors.grey[800],
                 iconSize: 35),
-            IconButton(
-                icon: Icon(Icons.menu),
-                color: Colors.grey[800],
-                onPressed: () => debugPrint("tapped"),
-                iconSize: 35),
+            PopupMenuButton<String>(
+              child: new IconTheme(
+                data: new IconThemeData(color: Colors.black, size: 35),
+                child: new Icon(Icons.menu),
+              ),
+              onSelected: choiceAction,
+              itemBuilder: (BuildContext context) {
+                return Constants.choices.map((String choice) {
+                  return PopupMenuItem<String>(
+                    value: choice,
+                    child: Text(choice),
+                  );
+                }).toList();
+              },
+            ),
           ],
         ),
       ),
@@ -417,4 +428,8 @@ class CategoriesScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+void choiceAction(String choice) {
+  print('Working');
 }
